@@ -1,0 +1,408 @@
+/* Barra de Navegación */
+
+.navbar {
+    padding: 2rem;
+    background-color: #d9e9f8;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilos generales - aplicamos el d-flex*/
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: "Rubik Dirt", system-ui; /*google fonts*/
+} 
+
+.seccion-oscura {
+    color: white;
+    background-color: #1b1b32;
+}
+
+.seccion-titulo {
+    font-size: 2rem;
+    padding: 15px 0; /*15 inf y sup y 0 izq y der*/
+    font-family: "Rubik Dirt", system-ui; /*google fonts*/
+}
+
+.seccion-descripcion {
+    font-size: 1.2rem;
+    color: #584e4e;
+}
+
+.seccion-texto {
+    font-size: 1.2rem;
+}
+
+.btn-info {
+    font-size: 1.1rem;
+    margin: 20px;
+}
+
+.texto-negro {
+    color: black;
+}
+
+.texto-blanco {
+    color: white;
+}
+
+.seccion-clara {
+    color: black;
+    background-color: white;
+}
+
+/* Seccion Hero */
+.hero {
+    background-color: #f5f6f7;
+    min-height: 450px;
+    text-align: center;
+}
+
+.hero-principal {
+    padding: 3rem;
+}
+
+/* Sobre mi */
+.sobre-mi {
+    height: 500px;
+    padding: 10px;
+}
+
+.sobre-mi .contenedor {
+    max-width: 600px;
+    text-align: center;
+}
+
+.hero-img-desarrollador {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /*es igual a la clase rounded-circle que se pondría en la img html*/
+    margin: 20px;
+}
+
+.hero-principal h2 {
+    font-size: 1.5rem;
+    color: #615151;
+}
+
+/* Experiencia */
+.experiencia { 
+    padding: 40px 40px 60px 40px;/*inf sup der izq*/
+}
+
+.experiencia .columna {
+    padding: 20px;
+    border:  2px solid #8080804d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; /*eje ppal equitativamt*/
+    transition: all 0.2s ease-in; /*efecto para todo-all dura 0.2seg y efecto ease-in*/
+}
+
+.experiencia .columna:hover { /*hover ucando elcursor está encima de ese obj cambiara de color fondo y texto*/
+    color: white;
+    background-color: #1b1b32;
+}
+
+.experiencia i {
+    font-size: 2.5rem;
+    color: #7ade30;
+    background-color: #0a0a23;
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+
+.experienca-titulo {
+    font-size:  25px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.badges-contenedor {
+    font-size: 20px;
+    font-weight:  bold;
+    margin: 10px 0;
+}
+
+.badge {
+    margin: 5px;
+}
+
+/* Proyectos */
+
+.proyectos-recientes {
+    padding: 40px;
+    /*background-color: #17494F;*/
+}
+
+.proyectos-recientes img {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;/*border ligeramente redoendeado*/
+    display: block;
+    transition: all 0.2s ease;
+    opacity: 1; 
+}
+.proyectos-recientes img:hover {
+    opacity: 0.2; 
+}
+
+
+.proyectos-contenedor {
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+
+.overlay {
+    transition: all 0.2s ease;
+    opacity: 0; /*transparente*/
+    position:  absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay p { 
+    font-size: 25px;
+    font-weight:  bold; /*negrita*/
+    margin-bottom: 0;
+}
+
+.proyecto {
+    position: relative;
+}
+
+.proyecto:hover .img { /*cuando el cursor esté sobre  el elemento proyecto se asigan el estilo a overlay*/
+    opacity: 0.2;
+}
+
+.proyecto:hover .overlay { /*cuando el cursor esté sobre  el elemento proyecto se asigan el estilo a overlay*/
+    opacity: 1; /*opaco, se ve todo */
+}
+
+.overlay .iconos-contenedor {
+    display: flex; /*los iconos se muestren en una sola fila*/
+}
+
+.overlay i { /*iconos*/
+    color: black;
+    font-size: 60px;
+    margin: 10px;
+}
+
+/* Exp laboral */
+.experiencia-laboral {
+    min-height: 500px;
+    padding: 30px;
+}
+
+.experiencia-laboral .card {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px;
+}
+
+.experiencia-laboral .card-header {
+    font-weight: bold;
+}
+
+/* Adaptable Responsivo, oculta el icono en el menu <medio */
+@media screen and (max-width: 400px) { /*para que los iconos de github y enlaces encima de la imagen sean mas pequeños cuando los disp son hasta 400px-pequeños*/
+    .overlay p {
+        font-size: 18px;
+    }
+
+    .overlay i {
+        font-size: 40px;
+    }    
+}
+
+.testimonios {
+    padding: 40px 40px 80px 40px;
+}
+
+.testimonios .carousel {
+    max-width: 800px;
+}
+
+.carousel-item {
+    height: 500px;   
+}
+
+.carousel-item .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonio-imagen {
+    height: 150px;
+    width: 150px;
+    margin: 10px 10px 20px 10px;
+}
+
+.testimonio-texto {
+    max-width: 70%;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Share Tech Mono", monospace;
+}
+
+.testimonio-info {
+    font-weight: bold;
+    text-align: center;
+}
+
+.testimonio-info p{
+    margin-bottom: 0;
+}
+
+.testimonio-footer .cliente {
+    font-size: 1.2rem;
+}
+
+.testimonio-footer .cargo {
+    font-size: 0.9rem;
+    color: #656060;
+}
+
+/* Contacto */
+.contacto .container {
+    max-width: 1100px;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.contacto .rectangulo {
+    margin-top: -5rem;
+    background-color: rgb(13, 110, 253);
+    border-radius: 10px;
+    box-shadow:  0px 1px 4px 1px white; /*sombra*/
+}
+
+.contacto .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contacto . descripcion {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contacto button {
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+        border:  2px solid white;
+        padding: 1.25em 2em;
+        margin: 10px;
+        border-radius: 100px;
+        transition: all 0.2s ease-in-out;
+}
+
+.contacto button:hover {
+    background-color: white;
+    color: black;
+}
+.contacto button i {
+    color: white;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.contacto button:hover i {
+    color: black;
+}
+
+/* Pie de pagina (footer) */
+footer {
+    min-height: 500px;
+}
+
+.footer-logo {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+}
+
+.footer-texto {
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.iconos-redes-sociales a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales  i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+
+..iconos-redes-sociales a:hover {
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+
+.iconos-redes-sociales a:hover i {
+    color: black;    
+}
+
+.derechos-de-autor{
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}
+
+@media screen and (max-width: 767px){
+    .navbar-brand {
+        display: none;        
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .testimonio-imagen {
+        height: 120px;
+        width: 120px;
+    }
+    
+    .testimonio-texto {
+        font-size: 18px;
+    }    
+}
+
+@media screen and (min-width: 700px) { /*la imagen no agrandara más de alli*/
+    .hero-inferior-img {
+        max-width: 800 px;
+    }
+}

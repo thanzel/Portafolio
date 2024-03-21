@@ -1,0 +1,10 @@
+Añadir Comentarios ctrl+k+c . Para descomentar ctrl+k+u
+Instalar Live Server
+la navbar se expande cuando sea mediano (no grande) navbar-expand-md
+container-fluid: se ajusta al 100% de la ventana, mientras que container solo no se ajusta al 100%
+d-flex = contenedor flexible
+d-flex justify-content-center: alineado eje ppal
+align-items-center: alineado eje secundario, el perpendicular
+
+ align-items-stretch: se estiran en el eje perpendicular
+ img-fluid: permite que la imagen searesponsiva, se adapte al navegador
